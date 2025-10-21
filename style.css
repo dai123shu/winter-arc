@@ -1,0 +1,194 @@
+/* --- Global Variables and Base Reset --- */
+:root {
+  --color-bg-primary: #0f172a; /* Dark Slate Blue (Background) */
+  --color-text-light: #e2e8f0; /* Light Slate (Default Text) */
+  --color-text-subtle: #94a3b8; /* Subtle Gray */
+  --color-accent-teal: #2dd4bf; /* Teal 400 (Primary Accent) */
+  --color-accent-dark: #14b8a6; /* Teal 600 (Border) */
+}
+
+/* Base Body Styling and Font */
+body {
+  /* Assuming 'Inter' or 'Roboto' is available, or use a reliable sans-serif stack */
+  font-family: "Inter", sans-serif, "Roboto", sans-serif;
+
+  /* Apply base colors using the defined CSS variables */
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-light);
+  padding: 1rem; /* Mobile padding */
+  min-height: 100vh;
+  margin: 0;
+  transition: background-color 0.5s ease;
+}
+
+/* Container for Responsiveness */
+.container {
+  max-width: 80rem; /* Max width for desktop viewing */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Desktop Padding */
+@media (min-width: 768px) {
+  body {
+    padding: 3rem; /* Larger padding for tablets and desktops */
+  }
+}
+
+/* --- Typography and Header --- */
+.main-title {
+  font-size: 2.25rem; /* Default mobile size */
+  line-height: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 0.05em;
+
+  /* Gradient Effect */
+  background: linear-gradient(to right, var(--color-accent-teal), #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Fallback for browsers */
+}
+
+@media (min-width: 640px) {
+  .main-title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+/* --- Grid Layout (Device Friendly) --- */
+.entries-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .entries-grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    ); /* Two columns on desktop/tablet */
+  }
+}
+
+/* --- Card Styling (day-entry) --- */
+.day-entry {
+  background-color: rgba(30, 41, 59, 0.5); /* Background with transparency */
+  backdrop-filter: blur(4px);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(20, 184, 166, 0.5);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
+    0 4px 6px -2px rgba(0, 0, 0, 0.1);
+
+  /* Animation for hover effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.day-entry:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 25px -5px rgba(34, 197, 94, 0.4),
+    0 6px 10px -3px rgba(0, 0, 0, 0.1);
+}
+
+.day-entry h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #48d4b8;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.5rem;
+}
+
+/* --- Category Styling --- */
+.category {
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #334155;
+}
+
+.day-entry .category:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.category h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-accent-teal);
+  margin-bottom: 0.75rem;
+}
+
+.category h3 span {
+  margin-left: 0.75rem;
+}
+
+/* Simple Text Content (Study/Expenses) */
+.category > p {
+  font-size: 1.125rem;
+  color: #cbd5e1;
+  margin-left: 0.5rem;
+}
+
+/* List Content (Exercise/CP) */
+.category ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.category ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #cbd5e1;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.category ul li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.category ul li span:first-child {
+  color: var(--color-text-subtle);
+  font-weight: 300;
+  width: 50%;
+}
+
+.category ul li span:last-child {
+  text-align: right;
+  color: var(--color-text-light);
+  font-weight: 500;
+  width: 50%;
+}
+
+/* CP Total Summary Box */
+.cp-summary-box {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background-color: rgba(51, 65, 85, 0.7);
+  border-radius: 0.375rem;
+  text-align: center;
+}
+
+.cp-summary-box p {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #48d4b8;
+}
+
+.cp-summary-box span {
+  font-size: 1.25rem;
+  color: white;
+  margin-left: 0.25rem;
+}

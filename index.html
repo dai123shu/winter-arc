@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winter Arc Progress Tracker</title>
+
+    <!-- Link the external CSS file for global styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!-- Using 'scroll-smooth' for better navigation experience -->
+  <body class="scroll-smooth">
+    <div class="container">
+      <!-- Main Title -->
+      <h1 class="main-title">❄️ Winter Arc Progress Tracker</h1>
+
+      <!-- Content container: Uses the entries-grid class for the responsive layout -->
+      <div id="entries" class="entries-grid">
+        <!-- Progress entries will be injected here by script.js -->
+      </div>
+    </div>
+
+    <!-- The data MUST be loaded before the script that tries to read it -->
+    <script src="https://dai123shu.github.io/files/data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
