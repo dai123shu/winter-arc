@@ -1,5 +1,5 @@
 let data = {
-  "21st Oct 2025 (Day 1)": {
+  "21st Oct 2025 (Day 0)": {
     exercise: {
       situps: "100",
       kicking: "2 minutes",
@@ -14,5 +14,15 @@ let data = {
       900: 0,
     },
     expenses: "0",
+  },
+  "22nd Oct 2025 (Day 1)": {
+    exercise: {
+      pullups: "5+5",
+    },
+    study: "0 hours",
+    CP: {
+      900: 2,
+    },
+    expenses: "568",
   },
 };
