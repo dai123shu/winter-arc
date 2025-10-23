@@ -25,4 +25,20 @@ let data = {
     },
     expenses: "568",
   },
+  "23rd Oct 2025 (Day 2)": {
+    exercise: {
+      situps: "50",
+      kicking: "1 minutes",
+      pushups: "20+20",
+      weights: "60 per hand",
+      squads: "20+20",
+      back: "40 per hand",
+      "hand rotation": "100",
+    },
+    study: "0 hours",
+    CP: {
+      900: 0,
+    },
+    expenses: "0",
+  },
 };
