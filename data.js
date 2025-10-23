@@ -37,8 +37,8 @@ let data = {
     },
     study: "0 hours",
     CP: {
-      900: 0,
+      900: 2,
     },
-    expenses: "0",
+    expenses: "406",
   },
 };
