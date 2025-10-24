@@ -50,11 +50,12 @@ let data = {
       squats: "30+30",
       back: "45 per hand",
       "hand rotation": "100",
+      "hand grip": "70+50+30+10",
     },
     study: "0 hours",
     CP: {
-      900: 0,
+      900: 2,
     },
-    expenses: "0",
+    expenses: "327",
   },
 };
