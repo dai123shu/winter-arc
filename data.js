@@ -28,7 +28,7 @@ let data = {
   "23rd Oct 2025 (Day 2)": {
     exercise: {
       situps: "50",
-      kicking: "1 minutes",
+      kicking: "1 minute",
       pushups: "20+20",
       weights: "60 per hand",
       squads: "20+20",
@@ -40,5 +40,21 @@ let data = {
       900: 4,
     },
     expenses: "406",
+  },
+  "24th Oct 2025 (Day 3)": {
+    exercise: {
+      situps: "60",
+      kicking: "1 minute 30 seconds",
+      pushups: "25+25",
+      weights: "60 per hand",
+      squads: "30+30",
+      back: "45 per hand",
+      "hand rotation": "100",
+    },
+    study: "0 hours",
+    CP: {
+      900: 0,
+    },
+    expenses: "0",
   },
 };
